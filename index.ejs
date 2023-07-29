@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title></title>
+</head>
+<div id="back">
+  <body>
+    <center>
+      <h1 id="heading">Bagheera Webtool</h1>
+    </center>
+    <div id="buttons">
+      <center>
+         <div id="flora_button">
+        <a class="btn btn-dark" href="flora">Flora</a>
+         </div>
+        <div id="bird_button">
+        <a class="btn btn-dark" href="fauna">Fauna</a>
+        </div>
+
+      </center>
+    </div>
+</div>
+
+
+  <!-- <center>
+    <div class="Step1">
+      <form action="/" method="post" enctype="multipart/form-data"> Select image to upload:
+        <input type="file" name="UserImage" accept=".jpg, .jpeg" />
+        <br>
+        <br>
+        <input type="submit" value="Upload Image" name="submit">
+        <br>
+        <br>
+  </center>
+  <center>
+    <button type="button" id="start-button" onclick="TestsFunction()">Start</button>
+  </center>
+  <br>
+  <br>
+  <div class="TestsDivClass" id="TestsDiv">
+    <div class="row" id="first-checkbox">
+      <% for(i=0;i<5;i++){ %>
+      <div class="item col-lg-2">
+        <input class="CheckBoxStep-1" type="checkbox">
+        <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+      </div>
+      <% } %>
+    </div>
+    <br>
+    <center>
+      <button id="identify" type="button" name="button" onclick="SourcesSection()">Send to identify</button>
+    </center>
+    <br><br>
+    </form>
+  </div>
+  <center>
+    </div>
+
+    <div id="SourcesID" class="sources">
+      <h4>Sources:</h4>
+      <br>
+      <input type="checkbox" name="" value="">
+      <label for="">iNAT</label>
+      <input type="checkbox" name="" value="">
+      <label for="">Pl@ntnet</label>
+      <input type="checkbox" name="" value="">
+      <label for="">Plant.ai</label>
+      <br>
+      <br>
+      <input type="checkbox" name="" value="">
+      <label for="">ABC</label>
+      <input type="checkbox" name="" value="">
+      <label for="">DEF</label>
+      <input type="checkbox" name="" value="">
+      <label for="">GHI</label>
+      <br>
+      <br>
+      <center>
+        <button id="start2" type="button" name="button" onclick="thirdSec()">Start</button>
+      </center>
+    </div>
+  </center>
+  </form>
+  </div>
+  <div id="Info" class="third">
+  <% for(var i=0;i<count;i++){%>
+  <p>Hello</p>
+  <%}%>
+    <h4>Image 1-1</h4>
+    <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+    <h4>Image 1-2</h4>
+    <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+    <h4>Image 1-3</h4>
+    <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+
+  </div>
+  <script type="text/javascript">
+  function checkboxes(){
+      var inputElems = document.getElementsByClassName("CheckBoxStep-1"),
+      count = 0;
+      for (var i=0; i<inputElems.length; i++) {
+      if (inputElems[i].type === "checkbox" && inputElems[i].checked === true){
+          count++;
+          alert(count);
+      }
+  }
+};
+var button = document.getElementById('start-button'); // Assumes element with id='button'
+
+function TestsFunction() {
+    var element = document.getElementById("TestsDiv");
+    element.classList.remove("TestsDivClass");
+}
+function SourcesSection(){
+  var element = document.getElementById("SourcesID");
+  element.classList.remove("sources");
+}
+function thirdSec(){
+  var element= document.getElementById("Info");
+  element.classList.remove("third");
+}
+  </script>
+  <script src="index.js" charset="utf-8"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="public/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title></title>
+</head>
+
+<body>
+  <center>
+    <div id="heads">
+      <h1 id="heading">Bagheera Webtool</h1>
+    </div>
+
+  </center>
+  <center>
+    <div class="Step1">
+      <form action="/flora-after-api" method="post" enctype="multipart/form-data"> Select image to upload:
+        <input for="file" id="file" type="file" name="UserImage" accept=".jpg, .jpeg" onchange="loadFile(event)" /> <br />
+        <br />
+        <p><img id="output" width="200" /></p>
+
+        <script>
+          var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+          };
+        </script>
+        <br>
+        <br>
+
+        <input type="submit" value="Upload Image" name="submit" onclick="displayInfo()"> <br>
+      </form>
+
+
+        <br>
+        <br>
+        <script>
+        function displayInfo(){
+          var element = document.getElementById("info");
+          element.classList.remove("info-plantent");
+        }
+        </script>
+  </center>
+  <center>
+    <form action="/flora-after-api-details" method="post" enctype="multipart/form-data">
+        <button type="submit" action="/flora-after-api-details" method="post" id="start-button" >Start</button>
+    </form>
+  </center>
+  <div id="info-part">
+    <p style="text-align:center;">
+      The information as obtained is:
+    </p>
+    <div id="info" >
+      <div class="row">
+        <div class="col-lg-6" style="text-align:left;">
+          <h2>EOL</h2>
+          <% for(i=0;i<1;i++){ %>
+            <br>
+            <h3>First</h3>
+            <br />
+            <label>Scientific Name : <%=eol_flora_name1%></label> <br />
+            <label>Identifier : <%=eol_flora_identifier1%></label> <br />
+            <label>Synonyms:<%=eol_synonym1_1%>,<%=eol_synonym1_2%></label> <br>
+            <label>Taxon Details 1</label> <br>
+            <label>Canonical Form : <%=taxon_eol_canonical_form1%></label><br>
+            <label>Name according to : <%=taxon_eol_nameaccto1%></label> <br>
+            <label>Source Identifier : <%=taxon_eol_source1%></label><br>
+            <label>Taxon rank : <%=taxon_eol_rank1%></label> <br>
+            <label>Txon Details 2</label> <br>
+            <label>Canonical Form : <%=taxon_eol_canonical_form2%></label> <br>
+            <label>Name according to : <%=taxon_eol_nameaccto2%></label><br>
+            <label>Source Identifier : <%=taxon_eol_source2%></label><br>
+            <label>Taxon Rank : <%=taxon_eol_rank2%></label><br>
+            <br />
+            <h3>Second</h3>
+            <br />
+            <label>Scientific Name : <%=eol_flora_name2%></label> <br />
+            <label>Identifier : <%=eol_flora_identifier2%></label><br />
+            <label>Synonyms:<%=eol_synonym2_1%>,<%=eol_synonym2_2%></label> <br>
+            <label>Taxon Details 1</label><br />
+            <label>Canonical Form : <%=taxon_eol2_canonical_form1%></label><br>
+            <label>Name according to : <%=taxon_eol2_nameaccto1%></label><br />
+            <label>Source Identifier : <%=taxon_eol2_source1%></label><br>
+            <label>Taxon Rank : <%=taxon_eol2_rank1%></label> <br>
+            <label>Txon Details 2</label><br />
+            <label>Canonical Form : <%=taxon_eol2_canonical_form2%></label><br />
+            <label>Name according to : <%=taxon_eol2_nameaccto2%></label><br>
+            <label>Source Identifier : <%=taxon_eol2_source2%></label><br>
+            <label>Taxon Rank : <%=taxon_eol2_rank2%></label><br>
+            <br />
+            <h3>Third</h3>
+            <br />
+            <label>Scientific Name : <%=eol_flora_name3%></label><br>
+            <label>Identifier : <%=eol_flora_identifier3%></label><br>
+            <label>Synonyms:<%=eol_synonym3_1%>,<%=eol_synonym3_2%></label> <br>
+            <label>Taxon Details 1</label><br>
+            <label>Canonical Form : <%=taxon_eol3_canonical_form1%></label><br>
+            <label>Name according to : <%=taxon_eol3_nameaccto1%></label><br>
+            <label>Source Identifier : <%=taxon_eol3_source1%></label><br>
+            <label>Taxon Rank : <%=taxon_eol3_rank1%></label> <br>
+            <label>Txon Details 2</label><br>
+            <label>Canonical Form : <%=taxon_eol3_canonical_form2%></label>
+            <label>Name according to : <%=taxon_eol3_nameaccto2%></label><br>
+            <label>Source Identifier : <%=taxon_eol3_source2%></label><br>
+            <label>Taxon Rank : <%=taxon_eol3_rank2%></label><br>
+          <% } %>
+        </div>
+        <div class="col-lg-6" style="text-align:left;">
+          <h2>GBIF</h2>
+          <% for(i=0;i<1;i++){ %>
+            <br>
+            <label>Count : <%=gbif_count%></label><br>
+            <label>Limits : <%=gbif_limit%></label><br>
+            <br />
+            <h3>First</h3>
+            <br />
+            <label>Scientific Name : <%=gbif_scientificName1%></label><br>
+            <label>Taxon Key : <%=gbif_taxon_key1%></label><br>
+            <label>Country : <%=gbif_country1%></label> <br>
+            <label>Data Set Name : <%=gbif_dataSetName1%></label><br>
+            <label>Family : <%=gbif_family1%></label><br>
+            <label>Generic Name  : <%=gbif_genericName1%></label><br>
+            <label>Genus : <%=gbif_genus1%></label> <br>
+            <label>Identified By : <%=gbif_identifiedBy1%></label><br>
+            <label>Kingdom : <%=gbif_kingdom1%></label><br>
+            <label>Taxon Rank : <%=gbif_taxonRank1%></label><br>
+            <label>Sepecies : <%=gbif_species1%></label><br>
+            <label>State Province : <%=gbif_stateProvince1%></label><br>
+            <br />
+            <h3>Second</h3>
+            <br />
+            <label>Scientific Name : <%=gbif_scientificName2%></label><br>
+            <label>Taxon Key : <%=gbif_taxon_key2%></label><br>
+            <label>Country : <%=gbif_country2%></label> <br>
+            <label>Data Set Name : <%=gbif_dataSetName2%></label><br>
+            <label>Family : <%=gbif_family2%></label><br>
+            <label>Generic Name  : <%=gbif_genericName2%></label><br>
+            <label>Genus : <%=gbif_genus2%></label> <br>
+            <label>Identified By : <%=gbif_identifiedBy2%></label><br>
+            <label>Kingdom : <%=gbif_kingdom2%></label><br>
+            <label>Taxon Rank : <%=gbif_taxonRank2%></label><br>
+            <label>Sepecies : <%=gbif_species2%></label><br>
+            <label>State Province : <%=gbif_stateProvince2%></label><br>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="TestsDivClass" id="TestsDiv">
+    <div class="row" id="first-checkbox">
+      <% for(i=0;i<5;i++){ %>
+      <div class="item col-lg-2">
+        <input class="CheckBoxStep-1" type="checkbox">
+        <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+      </div>
+      <% } %>
+    </div>
+    <br>
+    <center>
+      <button id="identify" type="button" name="button" onclick="SourcesSection()">Send to identify</button>
+    </center>
+    <br><br>
+    </form>
+  </div>
+  <center>
+    </div>
+
+    <div id="SourcesID" class="sources">
+      <h4>Sources:</h4>
+      <br>
+      <input type="checkbox" name="" value="">
+      <label for="">iNAT</label>
+      <input type="checkbox" name="" value="">
+      <label for="">Pl@ntnet</label>
+      <input type="checkbox" name="" value="">
+      <label for="">Plant.ai</label>
+      <br>
+      <br>
+      <br>
+      <br>
+      <center>
+        <button id="start2" type="button" name="button" onclick="thirdSec()">Start</button>
+      </center>
+    </div>
+  </center>
+  </form>
+  </div>
+  <div id="Info" class="third">
+    <% for(var i=0;i<count;i++){%>
+    <p>Hello</p>
+    <%}%>
+    <h4>Image 1-1</h4>
+    <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+    <h4>Image 1-2</h4>
+    <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+    <h4>Image 1-3</h4>
+    <img src="https://media.istockphoto.com/photos/orange-picture-id185284489?k=20&m=185284489&s=612x612&w=0&h=LLY2os0YTG2uAzpBKpQZOAC4DGiXBt1jJrltErTJTKI=" alt="" width="100" height="100">
+
+  </div>
+  <script type="text/javascript">
+  function checkboxes(){
+      var inputElems = document.getElementsByClassName("CheckBoxStep-1"),
+      count = 0;
+      for (var i=0; i<inputElems.length; i++) {
+      if (inputElems[i].type === "checkbox" && inputElems[i].checked === true){
+          count++;
+          alert(count);
+      }
+  }
+};
+var button = document.getElementById('start-button'); // Assumes element with id='button'
+
+function TestsFunction() {
+    var element = document.getElementById("TestsDiv");
+    element.classList.remove("TestsDivClass");
+}
+function SourcesSection(){
+  var element = document.getElementById("SourcesID");
+  element.classList.remove("sources");
+}
+function thirdSec(){
+  var element= document.getElementById("Info");
+  element.classList.remove("third");
+}
+  </script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
